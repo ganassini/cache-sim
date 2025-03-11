@@ -1,5 +1,5 @@
 CC := gcc
-CFLAGS := -lm -Wall -Wextra
+CFLAGS := -lm -Wall -Wextra -g
 SRC = main.c util.c
 
 cache-sim: $(SRC)
