@@ -9,6 +9,6 @@ cd cache-sim
 make
 ./cache-sim <nsets> <bsize> <assoc> <repl> <debug> <input file>
 # or
-./exec_test [flag] [1..11 | all]
+./exec_test.sh [flag] [1..11 | all]
 ```
 
