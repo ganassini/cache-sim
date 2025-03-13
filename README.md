@@ -1,7 +1,7 @@
 
-# cache-sim
+# Cache-sim
 
-## tutorial
+## Tutorial
 
 ```bash
 git clone https://github.com/ganassini/cache-sim
