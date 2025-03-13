@@ -1,9 +1,9 @@
 CC := gcc
 CFLAGS := -lm -Wall -Wextra -g
-SRC = main.c util.c
+SRC = main.c
 
 cache-sim: $(SRC)
-	$(CC) $(CFLAGS) -o cache-sim $(SRC) -I .
+	$(CC) $(CFLAGS) -o cache-sim $(SRC)
 
 clean:
 	rm -f cache-sim
