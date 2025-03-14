@@ -197,7 +197,7 @@ void access_cache(Cache *c, uint32_t address, int flag)
     for (uint32_t i = 0; i < c->assoc; i++) {
         if (set->lines[i].valid && set->lines[i].tag == tag) {
             if (!flag)
-                printf("H -> address=%u, tag=%u, index=%u, offset=%u\n", address, tag, index, offset);
+                printf("HIT  | address=%u, tag=%u, index=%u, offset=%u\n", address, tag, index, offset);
             if (c->repl == LRU && set->lines[i].lru_node) {
 				lru_remove(set, set->lines[i].lru_node);
 				lru_append(set, set->lines[i].lru_node);
@@ -208,7 +208,7 @@ void access_cache(Cache *c, uint32_t address, int flag)
     }
 
     if (!flag)
-        printf("M -> address=%u, tag=%u, index=%u, offset=%u, ", address, tag, index, offset);
+        printf("MISS | address=%u, tag=%u, index=%u, offset=%u, ", address, tag, index, offset);
 
     c->misses++;
 	// handle compulsory misses 
